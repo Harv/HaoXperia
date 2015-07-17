@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <PreferenceCategory
+        android:key="pref_tips"
+        android:title="@string/pref_tips" />
+    <PreferenceCategory
+        android:key="pref_category_network"
+        android:title="@string/pref_category_network_mode">
+        <EditTextPreference
+            android:dialogMessage="@string/pref_preferred_network_mode_marshal_tips"
+            android:digits="0123456789,"
+            android:hint="@string/pref_preferred_network_mode_marshal_hint"
+            android:inputType="number"
+            android:key="pref_preferred_network_mode_marshal"
+            android:title="@string/pref_preferred_network_mode_marshal" />
+        <SwitchPreference
+            android:key="pref_config_show4GForLTE"
+            android:title="@string/pref_config_show4GForLTE" />
+        <SwitchPreference
+            android:key="pref_prefer_2g_visibility"
+            android:title="@string/pref_prefer_2g_visibility" />
+        <SwitchPreference
+            android:key="pref_use_3g_only"
+            android:title="@string/pref_use_3g_only" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_category_call"
+        android:title="@string/pref_category_call">
+        <SwitchPreference
+            android:key="pref_config_enable_call_blocking"
+            android:title="@string/pref_config_enable_call_blocking" />
+        <SwitchPreference
+            android:key="pref_config_enable_call_recording"
+            android:title="@string/pref_config_enable_call_recording" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_category_misc"
+        android:title="@string/pref_category_misc">
+        <SwitchPreference
+            android:key="pref_logger_enable"
+            android:title="@string/pref_logger_enable" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HaoXperia</string>
+    <string name="app_description">Xperia++</string>
+
+    <string name="pref_tips">星号(*)标识的选项需要重启才能生效</string>
+
+    <string name="pref_category_network_mode">网络</string>
+    <string name="pref_preferred_network_mode_marshal">首选网络类型*</string>
+    <string name="pref_preferred_network_mode_marshal_tips">0: WCDMA（首选）/GSM\n1: 仅GSM\n2: 仅WCDMA\n3: GSM auto (PRL)\n4: CDMA auto (PRL)\n5: 仅CDMA\n6: 仅EvDo\n7: GSM/CDMA auto (PRL)\n8: LTE/CDMA/EvDo\n9: LTE（首选）/WCDMA/GSM\n10: LTE/CDMA/EvDo/GSM\n11: 仅LTE\n12: LTE/WCDMA\n13: 仅TD-SCDMA\n14: 仅3G\n15: LTE/TD-SCDMA\n16: TD-SCDMA/GSM\n17: LTE/TD-SCDMA/GSM\n18: 3G（首选）/2G\n19: LTE/TD-SCDMA/WCDMA\n20: 4G（首选）/3G/2G</string>
+    <string name="pref_preferred_network_mode_marshal_hint">填入对应的数字，以逗号分隔</string>
+    <string name="pref_preferred_network_mode_marshal_error">错误的格式！请填入对应的数字，以逗号分隔，如18,20</string>
+    <string name="pref_config_show4GForLTE">用4G代替LTE*</string>
+    <string name="pref_prefer_2g_visibility">显示仅使用2G网络选项*</string>
+    <string name="pref_use_3g_only">显示仅使用3G网络选项*</string>
+
+    <string name="pref_category_call">通话</string>
+    <string name="pref_config_enable_call_blocking">显示呼叫阻止选项*</string>
+    <string name="pref_config_enable_call_recording">显示通话录音选项*</string>
+    <string name="pref_config_enable_call_recording_summary">需要安装com.sonymobile.callrecording</string>
+
+    <string name="pref_category_misc">其他</string>
+    <string name="pref_logger_enable">记录日志</string>
+</resources>
