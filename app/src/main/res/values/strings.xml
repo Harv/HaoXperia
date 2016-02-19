@@ -12,6 +12,7 @@
     <string name="pref_config_show4GForLTE">用4G代替LTE*</string>
     <string name="pref_prefer_2g_visibility">显示仅使用2G网络选项*</string>
     <string name="pref_use_3g_only">显示仅使用3G网络选项*</string>
+    <string name="pref_change_captive_portal_server">修改Portal Server为g.cn</string>
 
     <string name="pref_category_call">通话</string>
     <string name="pref_config_enable_call_blocking">显示呼叫阻止选项*</string>

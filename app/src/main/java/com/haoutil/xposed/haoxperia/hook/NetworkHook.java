@@ -185,6 +185,20 @@ public class NetworkHook extends BaseHook {
                     }
                 }
             });
+        } else if (loadPackageParam.packageName.equals("android")) {
+            Class clazz = XposedHelpers.findClass("android.provider.Settings$Global", loadPackageParam.classLoader);
+
+            XposedHelpers.findAndHookMethod(clazz, "getString", ContentResolver.class, String.class, new XC_MethodHook() {
+                @Override
+                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                    if ("captive_portal_server".equals(param.args[1])) {
+                        mSettingsHelper.reload();
+                        if (mSettingsHelper.getBoolean("pref_change_captive_portal_server", false)) {
+                            param.setResult("g.cn");
+                        }
+                    }
+                }
+            });
         }
     }
 

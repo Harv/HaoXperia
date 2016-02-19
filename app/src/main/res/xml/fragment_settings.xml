@@ -24,6 +24,9 @@
         <SwitchPreference
             android:key="pref_use_3g_only"
             android:title="@string/pref_use_3g_only" />
+        <SwitchPreference
+            android:key="pref_change_captive_portal_server"
+            android:title="@string/pref_change_captive_portal_server" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="pref_category_call"
