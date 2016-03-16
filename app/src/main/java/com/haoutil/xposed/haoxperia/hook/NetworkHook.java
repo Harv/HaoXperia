@@ -195,6 +195,7 @@ public class NetworkHook extends BaseHook {
                         mSettingsHelper.reload();
                         if (mSettingsHelper.getBoolean("pref_change_captive_portal_server", false)) {
                             param.setResult("g.cn");
+                            mLogger.log("Replace captive_portal_server with g.cn");
                         }
                     }
                 }

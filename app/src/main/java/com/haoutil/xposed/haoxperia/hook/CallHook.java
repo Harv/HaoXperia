@@ -1,5 +1,7 @@
 package com.haoutil.xposed.haoxperia.hook;
 
+import android.preference.PreferenceScreen;
+
 import com.haoutil.xposed.haoxperia.utils.Logger;
 import com.haoutil.xposed.haoxperia.utils.SettingsHelper;
 
@@ -41,7 +43,10 @@ public class CallHook extends BaseHook {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                         if ((Boolean) XposedHelpers.callMethod(param.thisObject, "packageExists", "com.sonymobile.callrecording")) {
-                            XposedHelpers.callMethod(param.thisObject, "createCallRecorderSettings");
+                            PreferenceScreen ps = (PreferenceScreen) XposedHelpers.callMethod(param.thisObject, "getPreferenceScreen");
+                            if (ps.findPreference("call_recorder_listpreference_key") == null) {
+                                XposedHelpers.callMethod(param.thisObject, "createCallRecorderSettings");
+                            }
                             mLogger.log("Show call recording option");
                         }
                     }
